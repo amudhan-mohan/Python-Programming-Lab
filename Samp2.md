@@ -78,3 +78,7 @@ dog = Dog()
 animal.speak()  # Output: Animal speaks
 dog.speak()     # Output: Dog barks
 
+# Aim: To Create a Python program to simulate a basic bank account system with deposit, withdrawal, and balance inquiry functionalities, along with operator overloading for account operations.
+
+    
+
