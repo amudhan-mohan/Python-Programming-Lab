@@ -1,6 +1,7 @@
 NumPy:
 
-Concept: NumPy, short for Numerical Python, is a fundamental package for scientific computing in Python. It provides support for arrays, matrices, and a collection of mathematical functions to operate on these arrays efficiently.
+Concept: 
+NumPy, short for Numerical Python, is a fundamental package for scientific computing in Python. It provides support for arrays, matrices, and a collection of mathematical functions to operate on these arrays efficiently.
 Key Features:
 Arrays for efficient numerical computing.
 Mathematical operations and functions.
@@ -8,7 +9,8 @@ Broadcasting for implicit looping.
 Linear algebra support.
 Pandas:
 
-Concept: Pandas is a powerful data manipulation and analysis library for Python. It provides data structures like Series and DataFrame, which are built on top of NumPy arrays, along with methods for data cleaning, manipulation, and analysis.
+Concept: 
+Pandas is a powerful data manipulation and analysis library for Python. It provides data structures like Series and DataFrame, which are built on top of NumPy arrays, along with methods for data cleaning, manipulation, and analysis.
 Key Features:
 DataFrame for structured data manipulation.
 Handling missing data and alignment.
@@ -16,7 +18,8 @@ Versatile data manipulation methods.
 Time series support.
 Matplotlib:
 
-Concept: Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. It provides a MATLAB-like interface for creating plots and charts to visualize data in various formats.
+Concept: 
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. It provides a MATLAB-like interface for creating plots and charts to visualize data in various formats.
 Key Features:
 Flexible plotting functions.
 Customization options for plots.
