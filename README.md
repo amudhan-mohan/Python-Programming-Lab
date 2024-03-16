@@ -23,10 +23,6 @@
 5. [Calculates a Student's Final Grade](./Exercise/5.py)
 
 6. [String Manipulation](./Exercise/6.py)
- 
-7. [e-Mail Validation](./Exercise/7.py)
- > **_NOTE:_**   
-During this 7th exercise, you need to install the required packages for execution, such as <code>pip install validate_email</code> , <code>pip install email-validate</code> and <code>pip install dnspython</code>. These packages can be installed in your <b>Command Prompt</b> or <b>Terminal</b>. If the program does not produce the expected result when run, please debug the code to ensure accurate results.
 
 8. [List of Dictionaries](./Exercise/8.py)
 
@@ -73,10 +69,6 @@ During this 17th exercise, you need to install the required packages for executi
 18. [Simple Chat Application using both TCP and UDP](./Exercise/18.py)
 
 19. [Two-Player Tic-Tac-Toe Game.](./Exercise/19.py)
-
-***
-
-20. ### This is Question will appear soon . . . .
 
 ***
 <div align="center" ><h2>Thank You for visiting! 🙏</h2></div>
