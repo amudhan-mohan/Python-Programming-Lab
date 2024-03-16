@@ -23,7 +23,7 @@
 5. [Calculates a Student's Final Grade](./Exercise/5.py)
 
 6. [String Manipulation](./Exercise/6.py)
-
+#
 8. [List of Dictionaries](./Exercise/8.py)
 
 ### Classes and objects:
