@@ -1,3 +1,4 @@
+Theoretical Concepts:
 1. Importing Tkinter and Creating a Main Application Window:
 Concept: Tkinter is the standard GUI toolkit for Python. It provides a set of tools for building desktop applications with graphical interfaces.
 
@@ -64,10 +65,23 @@ In this code:
 'root.mainloop()' starts the Tkinter main loop, which listens for events (such as button clicks) and updates the GUI accordingly.
 
 Aim:
-To create a Python program using Tkinter for a two-player Tic-Tac-Toe game, designing a graphical interface with a 3x3 grid where players can make moves and displaying results.
+To create a Python program using Tkinter for a two-player Tic-Tac-Toe game.
 
 Algorithm:
+1. Import the necessary modules: tkinter and messagebox.
+2. Define a class TicTacToe to represent the game.
+3. Initialize the game attributes such as the Tkinter root window, current player, game board, and buttons grid in the constructor (__init__ method).
+4. Create a method create_board() to generate the game board with buttons.
+5. Implement the make_move() method to handle player moves, update the board, and check for a winner or draw.
+6. Define the check_winner() method to verify winning conditions by checking rows, columns, and diagonals.
+7. Implement highlight_winner() method to visually highlight the winning combination on the GUI.
+8. Implement check_draw() method to check for a draw condition.
+9. Define end_game() method to display the result (winner or draw) using a messagebox and quit the game.
+10. Add a play() method to start the main event loop using root.mainloop().
+11. In the main block, create an instance of TicTacToe, and call its play() method to start the game loop.
 
+Result:
+Thus the Python program using Tkinter for a two-player Tic-Tac-Toe game has been executed successfully.
 
 
 
