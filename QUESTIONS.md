@@ -35,13 +35,6 @@ If a student's participation score is 0, even if the overall score is above 60, 
 
 6. [Study and implement the string manipulation functions. Write a Python function named title_case that takes a sentence as input and returns a new sentence where each word is capitalized, except for common words (e.g., "and," "the," "in") which are lowercase, unless they appear at the beginning of the sentence. Use list comprehension to achieve this.](./Exercise/6.py)
 
-7. [You have a simple Python program for email validation that uses the validate_email_address library to check if an email address is valid. The program also prints an informative error message if the email is considered invalid. Now, you want to further enhance this program by incorporating additional checks and providing user feedback.](./Exercise/7.py)
-
-<ol>a) Include an additional check to verify that the email domain has valid DNS records.
-
-b) Provide user-friendly error messages for different validation scenarios (e.g., invalid format, invalid domain, invalid mailbox).
-
-c) Allow the user to input an email address and test your enhanced validation program.</ol>
 
 ## Classes and objects:
 
