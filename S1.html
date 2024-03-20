@@ -1,0 +1,111 @@
+<code>
+import socket
+import threading
+
+# TCP Server Function
+def tcp_server(host, port):
+    tcp_server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    tcp_server_socket.bind((host, port))
+    tcp_server_socket.listen(5)
+    print("TCP Server listening on {}:{}".format(host, port))
+
+    def handle_client_tcp(client_socket, addr):
+        while True:
+            try:
+                data = client_socket.recv(1024)
+                if not data:
+                    break
+                print(f"TCP Message from {addr}: {data.decode()}")
+                broadcast(data)
+            except:
+                break
+        client_socket.close()
+
+    def broadcast(message):
+        for client in tcp_clients:
+            try:
+                client.send(message)
+            except:
+                client.close()
+                tcp_clients.remove(client)
+
+    tcp_clients = []
+
+    while True:
+        client_socket, addr = tcp_server_socket.accept()
+        tcp_clients.append(client_socket)
+        client_thread = threading.Thread(target=handle_client_tcp, args=(client_socket, addr))
+        client_thread.start()
+
+# UDP Server Function
+def udp_server(host, port):
+    udp_server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    udp_server_socket.bind((host, port))
+    print("UDP Server listening on {}:{}".format(host, port))
+
+    while True:
+        data, addr = udp_server_socket.recvfrom(1024)
+        print(f"UDP Message from {addr}: {data.decode()}")
+        broadcast(data)
+
+    udp_server_socket.close()
+
+if __name__ == "__main__":
+    HOST = "127.0.0.1"
+    TCP_PORT = 12345
+    UDP_PORT = 12346
+
+    tcp_server_thread = threading.Thread(target=tcp_server, args=(HOST, TCP_PORT))
+    udp_server_thread = threading.Thread(target=udp_server, args=(HOST, UDP_PORT))
+
+    tcp_server_thread.start()
+    udp_server_thread.start()
+
+</code>
+
+<code>
+import socket
+import threading
+
+def tcp_client(host, port):
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect((host, port))
+
+    def receive_messages():
+        while True:
+            try:
+                data = client_socket.recv(1024)
+                print("\nReceived:", data.decode())
+            except:
+                print("\nDisconnected from server.")
+                break
+
+    threading.Thread(target=receive_messages).start()
+
+    while True:
+        message = input()
+        client_socket.send(message.encode())
+
+if __name__ == "__main__":
+    HOST = "127.0.0.1"
+    PORT = 12345
+    tcp_client(HOST, PORT)
+
+</code>
+
+<code>
+import socket
+
+def udp_client(host, port):
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+    while True:
+        message = input()
+        client_socket.sendto(message.encode(), (host, port))
+
+if __name__ == "__main__":
+    HOST = "127.0.0.1"
+    PORT = 12346
+    udp_client(HOST, PORT)
+
+</code>
